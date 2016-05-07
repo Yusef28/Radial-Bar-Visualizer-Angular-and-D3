@@ -78,7 +78,7 @@ $(document).ready(function () {
 		
 		//var circles = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,1,2,3,4,5,6,7,8,9,10,11,12,13,14,1,2,3,4,5,6,7,8,9,10,11,12,13,14,1,2,3,4,5,6,7,8,9,10,11,12,13,14,1,2,3,4,5,6,7,8,9,10,11,12,13,14,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 		var offsetX = 500;
-		var offsetY = 160;
+		var offsetY = 200;
 		var Num = frequencyData.length;
 		var amp = 50;
 		
@@ -93,7 +93,7 @@ $(document).ready(function () {
 			.data(frequencyData)
 			.enter()
 			.append('rect')
-			.style('fill', 'blue')
+			.style('fill', 'black')
 			.attr('x', function(d, i)
 			{
 				return trigX(i, Num, offsetX, amp); 
@@ -163,9 +163,9 @@ function renderChart() {
          return trigY(-90, Num, 40, d);  //using sin/cos here causes half of the lines to be decreasing because sin goes from -1 to 1, 
       })									//soo I shouldn't use sin here...or use the same angle each time? Ended up trying -90 degrees which worked well
       .attr('fill', function(d) {
-         return 'rgb( '+ d +',0,'+ d + ')';
+         return 'rgb(0,0,0)';
       })
-	  .attr('fill-opacity', '0.6');
+	  .attr('fill-opacity', '0.8');
 	  
 	  
 	  
